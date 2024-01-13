@@ -1,8 +1,7 @@
 public class ArrayOps {
     public static void main(String[] args) {
-        int [] array1 = {3, -4, 1, 2, 5};
-        int [] array2 = {1, 3, -4, 5};
-        System.out.println(containsTheSameElements(array1,array2));
+        int [] array = {2,8,3,7,8};
+        System.out.println(secondMaxValue(array));
 
 
         
@@ -51,7 +50,7 @@ public class ArrayOps {
 
         for(int n = 0; n<array.length; n++)
         {
-            if( (array[n] < max1) && (array[n] >=max2)) 
+            if( (array[n] <= max1) && (array[n] >max2)) 
             {
                 max2 = array[n];//sets max2 to be the 2nd max value of array
             }
