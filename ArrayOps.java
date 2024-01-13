@@ -47,14 +47,33 @@ public class ArrayOps {
             }
         }
         int max2 = array [0]; // sets max2 to be the first in the array
+        int countMax = 0;
 
-        for(int n = 0; n<array.length; n++)
+        for(int j = 0; j<array.length; j++) //checks if max 1 appears more than 1 time in array
         {
-            if( (array[n] <= max1) && (array[n] >max2)) 
+            if ((array[j] == max1)) // in case max1 appears twice
+            {
+                countMax++;
+            }
+
+        }
+        if(countMax == 1)
+        {
+            for(int n = 0; n<array.length; n++)
+        {
+            if((array[n] < max1) && (array[n] > max2)) 
             {
                 max2 = array[n];//sets max2 to be the 2nd max value of array
             }
+            
         }
+        }
+
+        else
+        {
+            max2 = max1;
+        }
+        
 
         return max2;
     }
