@@ -23,8 +23,6 @@ public class StringOps {
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) 
     {
-        String string = "tWo    wordS";
-        System.out.println(camelCase(string));
         
     }
 
@@ -44,8 +42,7 @@ public class StringOps {
                 {
                     c = Character.toLowerCase(string.charAt(i)); //change c to lower case
                 } 
-                   else 
-                   {
+                   
                     //Checks if the character is a vowel
                     for (int v = 0; v < Vowels.length(); v++)
                      {
@@ -56,7 +53,7 @@ public class StringOps {
                        }
                      }
                    }
-            }       
+                   
               else // c is space
                 {c = string.charAt(i);}
 
@@ -64,7 +61,7 @@ public class StringOps {
 
         }
         return Final;
-    }
+    
 
     public static String camelCase (String string) 
     {
