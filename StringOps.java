@@ -21,22 +21,90 @@ public class StringOps {
     //////        in Recitation 3 question 5             ///////
     //////                                               ///////
     ////////////////////////////////////////////////////////////
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
+        String string = "tWo    wordS";
+        System.out.println(camelCase(string));
         
     }
 
     public static String capVowelsLowRest (String string) {
-        // Write your code here:
-        return "";
+        String Final = "";
+        String Vowels = "aeiou";
+        char c ;
+
+        //Outer loop for all String
+        for (int i = 0; i < string.length(); i++)
+        {   
+            c = string.charAt(i); // c is the character at place i in string
+
+            if (Character.isLetter(string.charAt(i))) //Is c a letter
+            {
+                if ((string.charAt(i) >= 'A') && (string.charAt(i)<= 'Z')) //Is c upper case?
+                {
+                    c = Character.toLowerCase(string.charAt(i)); //change c to lower case
+                } 
+                   else 
+                   {
+                    //Checks if the character is a vowel
+                    for (int v = 0; v < Vowels.length(); v++)
+                     {
+                       if(string.charAt(i) == (Vowels.charAt(v))) //In case the character is a vowel
+                       {
+                         c = Character.toUpperCase(string.charAt(i)); // Change vowel to upper case
+                         break;
+                       }
+                     }
+                   }
+            }       
+              else // c is space
+                {c = string.charAt(i);}
+
+          Final = Final + c;      
+
+        }
+        return Final;
     }
 
-    public static String camelCase (String string) {
-        // Write your code here:
-        return "";
+    public static String camelCase (String string) 
+    {
+        String Final = "";
+        int i = 0;
+        //change first char to lower case
+        char c = Character.toLowerCase(string.charAt(i)); //change first char to lower casc 
+        Final = Final + c;
+        
+        //loop for all String
+        for (i = 1; i < string.length(); i++)
+        {
+            c = string.charAt(i); // c is the character at place i in string
+            
+            if ((string.charAt(i)) != ' ' ) //Is c a letter
+            {
+                if ((string.charAt(i) >= 'A') && (string.charAt(i)<= 'Z')) //Is c upper case?
+                {
+                    c = Character.toLowerCase(string.charAt(i)); //change c to lower case
+
+                } 
+                
+                if ((string.charAt(i-1)) == ' ')
+                 {
+                  c = Character.toUpperCase(string.charAt(i)); //change c to upper case
+                 }
+                 
+                 Final = Final + c;
+            }
+
+              
+    
+
+        }
+        return Final;
     }
 
     public static int[] allIndexOf (String string, char chr) {
         // Write your code here:
         return new int[1];
     }
+
 }
