@@ -72,7 +72,7 @@ public class StringOps {
         Final = Final + c;
         
         //loop for all String
-        for (i = 1; i < string.length(); i++)
+        for (i = 0; i < string.length(); i++)
         {
             c = string.charAt(i); // c is the character at place i in string
             
@@ -84,7 +84,7 @@ public class StringOps {
 
                 } 
                 
-                if ((string.charAt(i-1)) == ' ')
+                if ((i!=0) && (string.charAt(i-1)) == ' ')
                  {
                   c = Character.toUpperCase(string.charAt(i)); //change c to upper case
                  }
@@ -92,16 +92,23 @@ public class StringOps {
                  Final = Final + c;
             }
 
-              
-    
-
         }
         return Final;
     }
 
     public static int[] allIndexOf (String string, char chr) {
-        // Write your code here:
-        return new int[1];
+        int[] arr = new int[string.length()];
+        int j = 0;
+
+        for (int i = 0; i < string.length(); i++)
+        {
+            if ((string.charAt(i)) == chr)
+            {
+                arr[j] = i;
+                j++;
+            }
+        }
+        return arr;
     }
 
 }
