@@ -29,10 +29,11 @@ public class StringOps {
     public static String capVowelsLowRest (String string) {
         String Final = "";
         String Vowels = "aeiouAEIOU";
-        char c ;
+        int i = 0;
+        char c = string.charAt(i) ;
 
         //Outer loop for all String
-        for (int i = 0; i < string.length(); i++)
+        for (i = 0; i < string.length(); i++)
         {   
             c = string.charAt(i); // c is the character at place i in string
 
@@ -67,9 +68,6 @@ public class StringOps {
     {
         String Final = "";
         int i = 0;
-        //change first char to lower case
-        char c = Character.toLowerCase(string.charAt(i)); //change first char to lower casc 
-        Final = Final + c;
         
         //loop for all String
         for (i = 0; i < string.length(); i++)
