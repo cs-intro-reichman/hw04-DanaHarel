@@ -30,7 +30,7 @@ public class StringOps {
 
     public static String capVowelsLowRest (String string) {
         String Final = "";
-        String Vowels = "aeiou";
+        String Vowels = "aeiouAEIOU";
         char c ;
 
         //Outer loop for all String
