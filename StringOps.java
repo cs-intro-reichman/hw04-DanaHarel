@@ -46,7 +46,7 @@ public class StringOps {
                     //Checks if the character is a vowel
                     for (int v = 0; v < Vowels.length(); v++)
                      {
-                       if(string.charAt(i) == (Vowels.charAt(v))) //In case the character is a vowel
+                       if(c == (Vowels.charAt(v))) //In case the character is a vowel
                        {
                          c = Character.toUpperCase(string.charAt(i)); // Change vowel to upper case
                          break;
@@ -61,7 +61,7 @@ public class StringOps {
 
         }
         return Final;
-    
+    }
 
     public static String camelCase (String string) 
     {
