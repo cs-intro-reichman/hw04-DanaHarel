@@ -25,6 +25,8 @@ public class StringOps {
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) 
     {
+        String string = "HELLO world";
+        System.out.println(camelCase (string) );
      
     }
 
@@ -71,12 +73,12 @@ public class StringOps {
         String Final = "";
         int i = 0;
         char c;
+        int e = 0; // will be the indicate for the i-1 place in string
         
         //loop for all String
         for (i = 0; i < string.length(); i++)
         {
             c = string.charAt(i); // c is the character at place i in string
-            
             if ((string.charAt(i)) != ' ' ) //Is c a letter
             {
                 if ((string.charAt(i) >= 'A') && (string.charAt(i)<= 'Z')) //Is c upper case?
@@ -84,13 +86,13 @@ public class StringOps {
                     c = Character.toLowerCase(string.charAt(i)); //change c to lower case
 
                 } 
-                
-                if ((i!=0) && (string.charAt(i-1)) == ' ')
+                if ((i!=0) && (string.charAt(e)) == ' ')
                  {
                   c = Character.toUpperCase(string.charAt(i)); //change c to upper case
                  }
                  
                  Final = Final + c;
+                 e = i;
             }
 
         }
@@ -119,6 +121,7 @@ public class StringOps {
                 j++;
             }
         }
+        
         return arr;
     }
 
