@@ -70,18 +70,17 @@ public class StringOps {
 
     public static String camelCase(String string) {
         String finalStr = "";
-        int i = 0;
         char c;
-        int e = 0; // will be the indicator for the i-1 place in string
+        int e = -1; // will be the indicator for the i-1 place in string
     
         // loop for all String
-        for (i = 0; i < string.length(); i++) {
+        for (int i = 0; i < string.length(); i++) {
             c = string.charAt(i); // c is the character at place i in string
             if (string.charAt(i) != ' ') { // Is c a letter
                 if (string.charAt(i) >= 'A' && string.charAt(i) <= 'Z') { // Is c upper case?
                     c = Character.toLowerCase(string.charAt(i)); // change c to lower case
                 }
-                if (i != 0 && string.charAt(e) == ' ') {
+                if (e >= 0 && string.charAt(e) == ' ') {
                     c = Character.toUpperCase(string.charAt(i)); // change c to upper case
                 }
     
