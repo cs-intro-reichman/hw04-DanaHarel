@@ -25,6 +25,8 @@ public class StringOps {
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) 
     {
+        String string = " Hello world";
+        System.out.println(camelCase(string));
     }
 
     public static String capVowelsLowRest (String string) {
@@ -65,26 +67,27 @@ public class StringOps {
         return Final;
     }
 
+
     public static String camelCase(String string) {
         String finalStr = "";
-        int i = 0;
-        char c = string.charAt(i);
-        char p;
-        if (Character.isWhitespace(c)) // c is white space 
-        {
-            p = c;
-        }
-         else
-         {
-            c = Character.toLowerCase(string.charAt(i)); // change c to lower case
-            finalStr = finalStr + c;
-            p = c;
-         }
+        // int i = 0;
+        // char c = string.charAt(i);
+        char p = ' ';
+        // if (Character.isWhitespace(c)) // c is white space 
+        // {
+        //     p = c;
+        // }
+        //  else
+        //  {
+        //     c = Character.toLowerCase(string.charAt(i)); // change c to lower case
+        //     finalStr = finalStr + c;
+        //     p = c;
+        //  }
     
         // loop for all String from i = 1
-        for (i = 1; i < string.length(); i++) 
+        for (int i = 0; i < string.length(); i++) 
         {
-            c = string.charAt(i); // c is the character at place i in string
+            char c = string.charAt(i); // c is the character at place i in string
             if (Character.isWhitespace(c)) // if c is white space
             {
                 p = c;
