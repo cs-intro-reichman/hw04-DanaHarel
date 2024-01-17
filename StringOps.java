@@ -25,7 +25,7 @@ public class StringOps {
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) 
     {
-        String string = "HELLO world";
+        String string = " two   wordS";
         System.out.println(camelCase (string) );
      
     }
@@ -71,29 +71,50 @@ public class StringOps {
     public static String camelCase(String string) {
         String finalStr = "";
         int i = 0;
-        char c;
-        char e = string.charAt(i);
-        if (string.charAt(i) >= 'A' && string.charAt(i) <= 'Z') { // Is c upper case?
-            c = Character.toLowerCase(string.charAt(i)); // change c to lower case
-             finalStr = finalStr + c;}
-    
-        // loop for all String
-        for (i = 1; i < string.length(); i++) {
-            c = string.charAt(i); // c is the character at place i in string
-            if (string.charAt(i) != ' ') { // Is c a letter
-                if (string.charAt(i) >= 'A' && string.charAt(i) <= 'Z') { // Is c upper case?
-                    c = Character.toLowerCase(string.charAt(i)); // change c to lower case
-                }
-                if (e == ' ') {
-                    c = Character.toUpperCase(string.charAt(i)); // change c to upper case
-                }
-    
-                finalStr = finalStr + c;
-                e = string.charAt(i);
-            }
+        char c = string.charAt(i);
+        char p;
+        if (Character.isWhitespace(c)) // c is white space 
+        {
+            p = c;
         }
-        return finalStr;
-    }
+         else
+         {
+            c = Character.toLowerCase(string.charAt(i)); // change c to lower case
+            finalStr = finalStr + c;
+            p = c;
+         }
+    
+        // loop for all String from i = 1
+        for (i = 1; i < string.length(); i++) 
+        {
+            c = string.charAt(i); // c is the character at place i in string
+            if (Character.isWhitespace(c)) // if c is white space
+            {
+                p = c;
+            }
+             else 
+             {
+                if (Character.isWhitespace(p)) // p (privious char) is white space 
+                {
+                 c = Character.toUpperCase(string.charAt(i)); // change c to upper case
+                 finalStr = finalStr + c;
+                 p=c;
+                }
+                 else
+                 {
+                   c = Character.toLowerCase(string.charAt(i)); // change c to lower case
+                   finalStr = finalStr + c;
+                   p = c;
+                  }
+
+             }
+            
+              } 
+
+              return finalStr;
+        }
+        
+
     
 
     public static int[] allIndexOf (String string, char chr) {
