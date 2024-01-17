@@ -25,8 +25,6 @@ public class StringOps {
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) 
     {
-        String string = " two   wordS";
-        System.out.println(camelCase (string) );
      
     }
 
