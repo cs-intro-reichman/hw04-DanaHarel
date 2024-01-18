@@ -82,11 +82,11 @@ public class StringOps {
           {
              c = Character.toLowerCase(string.charAt(i)); // change c to lower case
              finalStr = finalStr + c;
-            p = c;
+             p = c;
           }
     
          // loop for all String from i = 1
-         for (i = 0; i < string.length(); i++) 
+         for (i = 1; i < string.length(); i++) 
          {
              c = string.charAt(i); // c is the character at place i in string
              if (Character.isWhitespace(c)) // if c is white space
@@ -99,16 +99,19 @@ public class StringOps {
                  {
                   c = Character.toUpperCase(string.charAt(i)); // change c to upper case
                   p=c;
+                  finalStr = finalStr + c;
                  }
                   else
                   {
                     c = Character.toLowerCase(string.charAt(i)); // change c to lower case
                     p = c;
+                    finalStr = finalStr + c;
                   }
 
                }
             
            } 
+
 
            return finalStr;
     }
