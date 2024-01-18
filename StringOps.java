@@ -68,25 +68,27 @@ public class StringOps {
     }
 
 
-    public static String camelCase(String string) {
+    public static String camelCase(String string) 
+    {
        String finalStr = "";
        int i = 0;
        char c = string.charAt(i);
        char p = ' ';
        if (Character.isWhitespace(c)) // c is white space 
-         // {
-         //     p = c;
-         // }
-         //  {
-         //     c = Character.toLowerCase(string.charAt(i)); // change c to lower case
-         //     finalStr = finalStr + c;
-         //     p = c;
-         //  }
+         {
+             p = c;
+          }
+          else
+          {
+             c = Character.toLowerCase(string.charAt(i)); // change c to lower case
+             finalStr = finalStr + c;
+            p = c;
+          }
     
          // loop for all String from i = 1
-         for (int i = 0; i < string.length(); i++) 
+         for (i = 0; i < string.length(); i++) 
          {
-             char c = string.charAt(i); // c is the character at place i in string
+             c = string.charAt(i); // c is the character at place i in string
              if (Character.isWhitespace(c)) // if c is white space
              {
                  p = c;
