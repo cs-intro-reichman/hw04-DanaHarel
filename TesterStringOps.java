@@ -50,7 +50,7 @@ public class TesterStringOps {
                 // Add more test cases as needed
         };
 
-        String result = StringOps.camelCase(testCases[inputNumber - 1]);
+        String result = StringOps.camelCase(testCases[inputNumber]);
         System.out.println(result);
     }
 
