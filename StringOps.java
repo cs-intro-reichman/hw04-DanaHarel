@@ -30,7 +30,7 @@ public class StringOps {
     }
 
     public static String capVowelsLowRest (String string) {
-        String Final = "";
+        String Final = ""; // #feedback - variable should start with lower case, i.e. final.
         String Vowels = "aeiouAEIOU";
         int i = 0;
         char c = string.charAt(i) ;
@@ -40,6 +40,7 @@ public class StringOps {
         {   
             c = string.charAt(i); // c is the character at place i in string
 
+            // #feedback - you should not use Character class in this exercise.
             if (Character.isLetter(string.charAt(i))) //Is c a letter
             {
                 if ((string.charAt(i) >= 'A') && (string.charAt(i)<= 'Z')) //Is c upper case?
@@ -50,6 +51,7 @@ public class StringOps {
                     //Checks if the character is a vowel
                     for (int v = 0; v < Vowels.length(); v++)
                      {
+                         // #feedback - to check if a char is a vowel you can do - vowels.inedxOf(c) != -1
                        if(c == (Vowels.charAt(v))) //In case the character is a vowel
                        {
                          c = Character.toUpperCase(string.charAt(i)); // Change vowel to upper case

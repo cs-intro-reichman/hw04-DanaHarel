@@ -26,6 +26,7 @@ public class ArrayOps {
 
             if(count==0) //sests missing if x wasnt found in the array
             {
+                // #feedback - you can return the number here directly instead of assigning it to missing variable.
                 missing= i;//breaks the loop once the missing int is found
                 break;
 
@@ -59,6 +60,7 @@ public class ArrayOps {
         }
         if(countMax == 1)
         {
+            // #feedback - please note the indentation here.
             for(int n = 0; n<array.length; n++)
         {
             if((array[n] < max1) && (array[n] > max2)) 
@@ -82,6 +84,7 @@ public class ArrayOps {
     {
         boolean found = true;
         int count = 0; 
+        // #feedback - you also need to check the other direction, that values in array2 are in array1.
           for(int a1 = 0; a1<array1.length; a1++) // outer loop over array1
           {
             count =0;
